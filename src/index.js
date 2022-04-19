@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDom from "react-dom";
 
-function Control(props) {
-  const isLoggedIn = props.isLoggedIn;
+function Counter() {
+  const [count, setCount] = useState(0);
 
-  if (isLoggedIn) {
-    return <Logout />;
-  }
-  return <Login />;
+  return (
+    <>
+      <div>Count : {count}</div>
+      <button
+        onClick={() => {
+          setCount(count + 1);
+        }}
+      >
+        increment
+      </button>
+    </>
+  );
 }
 
-const element = <Control isLoggedIn={false} />;
+const element = <Counter />;
 
 ReactDom.render(element, document.getElementById("root"));
