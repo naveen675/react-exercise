@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import ReactDom from "react-dom";
 import Message from "./message";
-import EventBind from "./EventBind";
-
-function Counter() {}
+import EventBind from "./eventBind";
 
 const element = <EventBind />;
 
