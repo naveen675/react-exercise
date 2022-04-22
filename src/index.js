@@ -1,23 +1,10 @@
 import React, { useState } from "react";
 import ReactDom from "react-dom";
+import Message from "./message";
+import EventBind from "./EventBind";
 
-function Counter() {
-  const [count, setCount] = useState(0);
+function Counter() {}
 
-  return (
-    <>
-      <div>Count : {count}</div>
-      <button
-        onClick={() => {
-          setCount(count + 1);
-        }}
-      >
-        increment
-      </button>
-    </>
-  );
-}
-
-const element = <Counter />;
+const element = <EventBind />;
 
 ReactDom.render(element, document.getElementById("root"));
