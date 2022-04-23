@@ -4,7 +4,7 @@ import Message from "./message";
 import EventBind from "./eventBind";
 import Parent from "./parent";
 import Conditional from "./conditional";
-import Form from "./Form";
+import Form from "./form";
 
 // const element = <EventBind />;
 const element = <Form />;
