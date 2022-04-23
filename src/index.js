@@ -4,8 +4,9 @@ import Message from "./message";
 import EventBind from "./eventBind";
 import Parent from "./parent";
 import Conditional from "./conditional";
+import Form from "./Form";
 
 // const element = <EventBind />;
-const element = <Conditional />;
+const element = <Form />;
 
 ReactDom.render(element, document.getElementById("root"));
