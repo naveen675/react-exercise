@@ -1,45 +1,55 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import './App.css';
+import {store} from './store';
+
+
+
 
 
 function BookStore(){
+
+    
+
+    const bookDetails = store.map((book,index) => {
+        
+        return (<Book key={index} {...book} />)
+    })
     return (
         <div className='content'>
-            <Book />
-            <Book />
-            <Book />
-            <Book />
+            {bookDetails}
         </div>
     )
 }
 
-function Book() {
+function Book(props) {
+    const {img,title,author} = props;
+
   return (
     <div className='items'>
-        <Person />
-        <Title />
-        <Author />
+        <Person img={img}/>
+        <Title title={title}/>
+        <Author author={author}/>
     </div>
   )
 }
 
 
-const Person = () => {
+const Person = (props) => {
     return (
-        <img src="https://images-eu.ssl-images-amazon.com/images/I/41TxUmdg6hL._AC_SX368_.jpg" />
+        <img src={props.img} />
     )
 }
 
-const Title = () => {
+const Title = (props) => {
     return (
-        <h3>Bruised Passports: Travelling the World as Digital Nomads</h3>
+        <h3>{props.title}</h3>
     )
 }
 
-const Author = () => {
+const Author = (props) => {
     return (
-    <p>Savi Munjal </p>
+    <p>{props.author}</p>
     )
 }
 
